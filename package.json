@@ -1,0 +1,34 @@
+{
+  "name": "canvas-cast-serial",
+  "version": "1.0.0",
+  "description": "Stream HTML canvas to an hardware matrix using a microcontroller.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Owen McAteer",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "serialport": "^8.0.7",
+    "ws": "^7.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/owenmcateer/canvas-cast-serial.git"
+  },
+  "keywords": [
+    "Canvas",
+    "Arduino",
+    "LED Matrix",
+    "cast",
+    "USB",
+    "Serial",
+    "stream",
+    "JavaScript"
+  ],
+  "bugs": {
+    "url": "https://github.com/owenmcateer/canvas-cast-serial/issues"
+  },
+  "homepage": "https://github.com/owenmcateer/canvas-cast-serial#readme"
+}

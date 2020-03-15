@@ -1,0 +1,11 @@
+# Dependency directories
+node_modules/
+
+# npm cache directory
+.npm
+
+# Silly Mac
+.DS_Store
+
+# Editors
+.vscode/

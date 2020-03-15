@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas Cast (Serial)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/owenmcateer/canvas-cast/dist/App.css" rel="stylesheet">
+  </head>
+<body>
+<div class="wsBar">
+  <div class="brightness">
+    Matrix brightness:
+    <small>0%</small>
+    <input id="matrix-brightness" type="range" min="0" max="255" step="1" value="127" >
+    <small>100%</small>
+  </div>
+
+  <h4><a href="https://github.com/owenmcateer/canvas-cast" target="_blank">Canvas Cast</a></h4>
+  <div class="status"></div>
+  <div class="statusTxt"></div>
+  <div class="statusIP"></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/owenmcateer/canvas-cast/dist/App.js"></script>
+<script>
+// Config
+const matrix = {
+  // Node Serial server
+  ip: 'localhost:8081',
+  // Matrix pixel size
+  width: 16,
+  height: 8,
+  layoutSerpentine: true,
+  // Matrix brightness 0-255
+  brightness: 127,
+  // Context type (2d/webgl)
+  type: '2d',
+};
+
+// Start WS Matrix
+canvasCast.init(matrix);
+
+
+/**
+ * p5js 2D Matrix rain
+ */
+function setup() {
+  createCanvas(matrix.width, matrix.height);
+  pixelDensity(1);
+  frameRate(30);
+}
+
+function draw() {
+  background(0);
+
+  // Red dot moving around matrix
+  fill('red');
+  ellipse(
+    map(sin(frameCount / 20), -1, 1, 0, width),
+    map(cos(frameCount / 20), -1, 1, 0, height),
+    6,
+  );
+
+  // Cast data
+  const p5canvas = document.getElementById('defaultCanvas0');
+  canvasCast.cast(p5canvas);
+}
+</script>
+</body>
+</html>
