@@ -7,10 +7,15 @@
  * Edit the config settings below to run `node server.js`
  */
 const config = {
-  serialPort: '/dev/tty.usbserial-1410', // ie. (COM1, /dev/tty-usbserial1)
+  serialPort: '', // ie. (COM1, /dev/tty-usbserial1)
   baudRate: 115200,
   serverPort: 8081,
 };
+
+if (!config.serialPort) {
+  console.error('ERROR: Please set a Serial port to continue.')
+  return;
+}
 
 console.log('---\nWelcome to Canvas Cast (Serial)\n---');
 

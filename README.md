@@ -6,8 +6,6 @@ Built on top of [Canvas Cast](https://github.com/owenmcateer/canvas-cast) you ca
 
 If you want to cast over WiFi then please look at [Canvas Cast](https://github.com/owenmcateer/canvas-cast). 
 **Canvas Cast Serial** is uses a USB Serial connection and is intended for large LED displays, higher framerate or simple when you don't have WiFi.
-Bring your HTML canvas projects into the real world by streaming them in realtime over WiFi to an LED Matrix, using an Arduino compatable board with WiFi, such as the ESP8266..
-
 
 ## Features:
  - Stream any canvas element over USB
@@ -25,7 +23,7 @@ In this example setup we're using:
 * ESP8266 NodeMCU
 * 15x15 RGB LED Matrix (WS2812B)
 * 5V 10A PSU
-* Laptop & home WiFi
+* Laptop
 
 ### 1) Arduino/ESP8266
 a. Open the [Arduino sketch file](arduino/Canvas-Cast-Serial.ino) and edit the following settings:
@@ -46,7 +44,7 @@ a. Install require node packages:
 `npm install`  
 b. Open and edit the node server serial port.
 ```javascript
-serialPort: 'COM5', // eg. (COM1, /dev/tty-usbserial1)
+serialPort: 'COM3', // eg. (COM3, /dev/tty-usbserial1)
 ```
 c. Run node serial server:
 `npm run start`  
