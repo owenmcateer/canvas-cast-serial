@@ -7,8 +7,8 @@
  * Edit the config settings below to run `node server.js`
  */
 const config = {
-  serialPort: '', // ie. (COM1, /dev/tty-usbserial1)
-  baudRate: 115200,
+  serialPort: '/dev/tty.usbserial-1420', // ie. (COM1, /dev/tty-usbserial1)
+  baudRate: 1000000,
   serverPort: 8081,
 };
 

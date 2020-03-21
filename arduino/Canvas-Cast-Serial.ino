@@ -51,7 +51,7 @@ const uint8_t commandHeader[3] = { 0xC0, 0xFF, 0xEE };
 
 // Setup
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(1000000);
   delay(10);
 
   // Start LEDs
