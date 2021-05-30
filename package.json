@@ -11,7 +11,7 @@
   "license": "GPL-3.0",
   "dependencies": {
     "serialport": "^8.0.7",
-    "ws": "^7.2.2"
+    "ws": "^7.4.6"
   },
   "repository": {
     "type": "git",
